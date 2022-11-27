@@ -6,8 +6,8 @@ on:
   push:
     tags:
     - 'v*'
-  #  branches: 
-  #    - master
+    branches: 
+      - own-master
 #  schedule:
 #    - cron: 0 8 * * 5
   watch:
@@ -20,7 +20,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@own-master
+      uses: actions/checkout@v3
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
@@ -125,7 +125,7 @@ jobs:
         sudo ./build_firmware_modify $TNAME 0
         sudo mv -f images/*.trx /opt/images/
     - name : Upload packages
-      uses: actions/upload-artifact@own-master
+      uses: actions/upload-artifact@v3
       if: always()
       with:
         name: K2P
