@@ -78,9 +78,9 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_OC=n" >> .config
         echo 'CONFIG_FIRMWARE_MT7621_OC="0x362"' >> .config # 1000Mhz=0x312 1100Mhz=0x362 1120Mhz=0x372 1200Mhz=0x3B2
 
-        sudo ./clear_tree
-        sudo ./build_firmware_modify $TNAME 0
-        sudo mv -f images/*.trx /workspace/padavan-4.4/images
+        ./clear_tree
+        ./build_firmware_modify $TNAME 0
+        mv -f images/*.trx /workspace/padavan-4.4/images
     - name : Upload packages
       uses: actions/upload-artifact@v3
       if: always()
