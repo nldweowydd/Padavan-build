@@ -31,7 +31,7 @@ jobs:
         pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget
     - name: Clone source code
       run: |
-        git clone --depth=1 https://github.com/77160860/padavan-4.4.git /opt/rt-n56u
+        git clone --depth=1 https://github.com/imhy123/padavan-4.4.git /opt/rt-n56u
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
         mkdir -p /opt/images/
@@ -89,7 +89,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=n" >> .config
         
-        ##QOS & CPU Overclocking##
+        ## QOS & CPU Overclocking##
         echo "CONFIG_FIRMWARE_INCLUDE_SQM=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_OC=n" >> .config
         echo 'CONFIG_FIRMWARE_MT7621_OC="0x362"' >> .config # 1000Mhz=0x312 1100Mhz=0x362 1120Mhz=0x372 1200Mhz=0x3B2
