@@ -72,7 +72,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=n" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=y" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_XRAY=n" >> .config
@@ -82,7 +82,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_ZEROTIER=n" >> .confi
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> .config    
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=n" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=y" >> .config   
+        echo "CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME=n" >> .config   
         
         ##QOS & CPU Overclocking##
         echo "CONFIG_FIRMWARE_INCLUDE_SQM=y" >> .config
