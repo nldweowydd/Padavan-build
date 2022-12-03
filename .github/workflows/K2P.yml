@@ -97,4 +97,4 @@ jobs:
       if: always()
       with:
         name: K2P
-        path: /workspace/padavan-4.4/images
+        path: /opt/images
