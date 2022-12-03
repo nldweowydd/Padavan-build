@@ -20,7 +20,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@master
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
@@ -89,11 +89,11 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_OC=n" >> .config
         echo 'CONFIG_FIRMWARE_MT7621_OC="0x362"' >> .config # 1000Mhz=0x312 1100Mhz=0x362 1120Mhz=0x372 1200Mhz=0x3B2
 
-        ./clear_tree
-        ./build_firmware_modify $TNAME 0
-        mv -f images/*.trx /workspace/padavan-4.4/images
+        sudo ./clear_tree
+        sudo ./build_firmware_modify $TNAME 0
+        sudo mv -f images/*.trx /opt/images/
     - name : Upload packages
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@master
       if: always()
       with:
         name: K2P
