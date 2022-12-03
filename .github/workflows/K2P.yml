@@ -70,7 +70,7 @@ jobs:
         ######################################################################
         echo "CONFIG_FIRMWARE_INCLUDE_MENTOHUST=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_SCUTCLIENT=n" >> .config
-        echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=y" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_SSOBFS=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=n" >> .config
         echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >> .config
